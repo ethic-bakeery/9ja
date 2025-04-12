@@ -1,62 +1,90 @@
 
-# 🇳🇬 
+# Web Platform
 
-Welcome to the **Better Nigeria Movement Platform** GitHub repository — a web-based system built to organize, manage, and empower a nationwide grassroots movement in Nigeria. This platform enables structured communication, member onboarding, task management, and national collaboration across all 36 states and the Federal Capital Territory.
+A secure and scalable web platform designed to manage user roles, structured communication, and collaborative activities within a defined organizational framework.
 
-## 🌍 Project Overview
+## 👥 User Roles
 
-The Better Nigeria Platform is designed to:
-- Coordinate activities between National, State, and Local Government teams
-- Provide structured member registration, assignment, and engagement
-- Enable reporting, event planning, messaging, and feedback management
-- Promote transparency, accountability, and collaboration
+1. **Viewers**
+   - Read-only access to posts, events, announcements, and static pages.
+   - Cannot participate in decision-making or contribute content.
 
-## 🧩 Key Features
+2. **Members**
+   - Participate in group discussions.
+   - Create posts, polls, and upload documents.
+   - Join only one structured group (National, State, or Local Government), plus General group.
 
-- **User Registration** with role-based assignment (National, State, LGA)
-- **Login System** with email and phone number verification
-- **Event & Task Management** by location and role
-- **Message & Feedback System**
-- **Admin Dashboard** for oversight and planning
-- **Policy, Terms, and Structure Display** for member transparency
-- **WhatsApp/Telegram/Social Media Integration** for wider reach
+3. **Admins**
+   - Oversee and manage users, content, events, and stored documents.
+   - Monitor platform activities and maintain structure.
 
-## 🏗️ Tech Stack
+## 🧩 Core Components
 
-- **Frontend**: React + TypeScript + TailwindCSS (Vercel-hosted)
-- **Backend**: Convex (Realtime database and function backend)
-- **Deployment**: Vercel
+### ✅ Group Communication
+
+- Group chats categorized into:
+  - National
+  - State
+  - Local Government
+  - General (accessible to all members)
+- Members are restricted to one structured group + the General group.
+
+### ✅ Feeds
+
+- Members can post updates, which others can like and comment on.
+
+### ✅ Polls
+
+- Members can create polls to gather opinions.
+- Polls are shareable via link.
+
+### ✅ Events Page
+
+- Lists upcoming organizational events for all users to view.
+
+### ✅ Announcements
+
+- Public announcements posted by Admins or selected members.
+
+### ✅ Contact / Complaints
+
+- Anyone can send messages or complaints through this interface.
+- Works with or without an account.
+
+### ✅ Documents
+
+- Upload and archive event reports, official communications, etc.
+- Serves as a reference for all formal documentation.
+
+### ✅ Activity Tracking
+
+- Record meetings and other important internal activities.
+
+### ✅ User Profiles
+
+- Each user has a profile including:
+  - Name, State, Local Government, Bio, Profile Image
+  - Role and Group Affiliation
+
+### ✅ Static Pages
+
+- Include general pages like:
+  - About Us
+  - Terms of Service
+  - Privacy Policy
+  - Organizational Objectives
+
+## ⚙️ Technology Stack (Suggested)
+
+- **Frontend**: React / Next.js / Vue.js
+- **Backend**: Django REST Framework / Express.js
+- **Database**: PostgreSQL / MongoDB
+- **Authentication**: JWT or Django Sessions
+- **Real-Time**: WebSockets / Firebase for chat
+- **File Storage**: AWS S3 / Firebase Storage
 
 ## 📁 Project Structure
 
-- `/pages`: Frontend pages including login, register, dashboard, etc.
-- `/convex`: Convex queries, mutations, and schema
-- `/components`: Reusable React components
-
-## ✅ Acceptance Criteria for Contributors
-
-- Must be passionate about positive national change
-- Follow project structure and naming conventions
-- Provide meaningful pull request messages and document your work
-
-## 🚀 Getting Started
-
-```bash
-git clone https://github.com/ethic-bakeery/better-nigeria-platform.git
-cd better-nigeria-platform
-npm install
-npx convex dev
-npm run dev
-```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please open issues or pull requests with your suggestions and improvements.
-
-## 📜 License
-
-This project is licensed under the MIT License.
-
----
-
-**Better Nigeria – Unity. Progress. Voice of the People. 🎙️💬**
+- Modular design with components for users, groups, feeds, polls, events, and documents.
+- RESTful API endpoints.
+- Role-based access control.
